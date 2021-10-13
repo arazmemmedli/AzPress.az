@@ -1,0 +1,426 @@
+#header {
+    .header {
+        &__topbar {
+            padding: 14px 0;
+            border-bottom: 1px solid $primary-color-light;
+            color: $main-color-light-4x;
+            font-size: $font-size-13;
+            font-family: $main-font-family;
+            &__container {
+                max-width: $container;
+                align-items: center;
+                margin: 0 auto;
+                grid-template-columns: 1fr 0.5fr;
+                &__left {
+                    .header__topbar__date {
+                        color: $main-color-light-4x;
+                        display: inline-block;
+                        border-right: 1px solid $main-color-light-3x;
+                        padding-right: 10px;
+                        line-height: 12px;
+                    }
+                    .header__topbar__menu {
+                        &__item {
+                            display: inline-block;
+                            &__list {
+                                display: inline-block;
+                                line-height: 12px;
+                                padding: 0 8px;
+                                a {
+                                    font-family: $main-font-family;
+                                    color: $main-color-light-4x;
+                                    font-size: $font-size-13;
+                                    transition: 400ms;
+                                    font-weight: $third-font-weight;
+                                    &:hover {
+                                        color: $secondary-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &__right {
+                    .header__topbar__socials {
+                        &__item {
+                            justify-content: flex-end;
+                            font-size: $font-size-14;
+                            &__list {
+                                display: inline-block;
+                                margin-left: 12px;
+                                a {
+                                    color: $main-color-light-2x;
+                                    transition: $main-transition;
+                                    &:hover {
+                                        color: $secondary-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__main {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            &__container {
+                max-width: $container;
+                margin: 0 auto;
+                padding: 0 15px;
+                grid-template-columns: 1fr;
+                &__item {
+                    text-align: left;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+        &__menu {
+            margin: 0;
+            padding: 0;
+            &__container {
+                max-width: $container;
+                margin: 0 auto;
+                grid-template-columns: 1fr;
+                border-bottom: 1px solid $primary-color-light;
+                &__item {
+                    justify-content: space-between;
+                    align-items: center;
+                    &.top__line {
+                        border-top: 2px solid $secondary-color;
+                    }
+                    .header__menu__nav {
+                        &__content {
+                            .header__menu__mobile__btn {
+                                display: none;
+                                color: $primary-color !important;
+                                background-color: $secondary-color;
+                                font-size: $font-size-14;
+                                margin-top: 12px;
+                                margin-bottom: 12px;
+                                box-shadow: none;
+                                border: none;
+                                padding: 6px 12px;
+                                font-weight: 400;
+                                margin: 12px 0;
+                                border-radius: 3px;
+                                transition: 400ms;
+                                -webkit-transition: 400ms;
+                            }
+                            &__list {
+                                display: flex;
+                                &__item {
+                                    display: inline-block;
+                                    border-top: none;
+                                    line-height: inherit;
+                                    &:hover .header__menu__nav__content__list__item__link {
+                                        color: $secondary-color;
+                                    }
+                                    &__link {
+                                        display: inline-block;
+                                        font-family: $main-font-family;
+                                        color: $black-color;
+                                        font-size: $font-size-14;
+                                        font-weight: $fourth-font-weight;
+                                        line-height: 24px;
+                                        padding: 15px 14px;
+                                        text-transform: uppercase;
+                                        &::before {
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            opacity: 0;
+                                            border-bottom: 3px solid;
+                                            transform: scale(0) translateZ(0);
+                                            transition: transform 0.45s ease, opacity 0.55s ease;
+                                        }
+                                    }
+                                    .header__menu__nav__dropdown {
+                                        width: 220px;
+                                        background: $primary-color;
+                                        top: 100%;
+                                        left: 0;
+                                        right: auto;
+                                        z-index: 7;
+                                        text-align: left;
+                                        display: none;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        transition: all 300ms ease-in-out;
+                                        margin: 0;
+                                        padding: 0;
+                                        border: none;
+                                        list-style: none;
+                                        /*  box-shadow: 0 2px 3px rgb(0 0 0 / 15%); */
+                                        &__item {
+                                            font-family: $main-font-family;
+                                            &:hover .header__menu__nav__dropdown__item__link {
+                                                color: $secondary-color;
+                                            }
+                                            &:hover .header__menu__nav__submenu {
+                                                display: block;
+                                                visibility: visible;
+                                                opacity: 1;
+                                                z-index: 5;
+                                            }
+                                            &__link {
+                                                display: block;
+                                                padding: 8px 20px;
+                                                background-color: inherit;
+                                                color: $main-color-light-2x;
+                                                font-size: $font-size-14;
+                                                font-weight: $secondary-font-weight;
+                                                border-bottom: 1px solid $main-color-light;
+                                                line-height: 22px;
+                                                text-transform: capitalize;
+                                                .header__menu__nav__dropdown__item__badge {
+                                                    display: inline-block;
+                                                    position: relative;
+                                                    color: $primary-color;
+                                                    background-color: #5cb85c;
+                                                    font-size: $font-size-9;
+                                                    font-weight: $third-font-weight;
+                                                    text-align: center;
+                                                    padding: 2px 5px;
+                                                    margin-left: 4px;
+                                                    top: -1px;
+                                                    border-radius: 2px;
+                                                    line-height: 10px;
+                                                }
+                                            }
+                                            .header__menu__nav__submenu {
+                                                width: 220px;
+                                                background: $primary-color;
+                                                /*   box-shadow: 0 2px 3px rgb(0 0 0 / 15%);  */
+                                                top: 0;
+                                                left: 220px;
+                                                display: none;
+                                                visibility: hidden;
+                                                opacity: 0;
+                                                border: none;
+                                                list-style: none;
+                                                text-align: left;
+                                                padding: 0;
+                                                margin: 0;
+                                                transition: all 300ms ease-in-out;
+                                                &__item {
+                                                    font-family: $main-font-family;
+                                                    &__link {
+                                                        display: block;
+                                                        padding: 8px 20px;
+                                                        background-color: inherit;
+                                                        color: $main-color-light-4x;
+                                                        font-size: $font-size-14;
+                                                        font-weight: $secondary-font-weight;
+                                                        border-bottom: 1px solid $main-color-light;
+                                                        line-height: 22px;
+                                                        text-transform: capitalize;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .header__menu__nav__subvideo {
+                                        display: none;
+                                        min-width: 1140px;
+                                        position: absolute;
+                                        left: 0;
+                                        top: 100%;
+                                        padding: 0;
+                                        margin: 0;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        background: $primary-color;
+                                        /* box-shadow: 0 7px 13px 0 rgb(0 0 0 / 15%); */
+                                        text-align: left;
+                                        border: none;
+                                        &__content {
+                                            padding: 10px 15px;
+                                            .header__menu__nav__subvideo__item {
+                                                width: 25%;
+                                                padding: 0 10px;
+                                                &__img {
+                                                    height: 180px;
+                                                    &__link {
+                                                        img {
+                                                            max-width: 100%;
+                                                            object-fit: cover;
+                                                        }
+                                                    }
+                                                    .header__menu__nav__subvideo__badge {
+                                                        width: auto;
+                                                        height: auto;
+                                                        top: 15px;
+                                                        left: 15px;
+                                                        bottom: auto;
+                                                        &__link {
+                                                            display: inline-block;
+                                                            height: 20px;
+                                                            color: $primary-color;
+                                                            background: #252525;
+                                                            font-family: $main-font-family;
+                                                            font-weight: $secondary-font-weight;
+                                                            font-size: $font-size-10;
+                                                            padding: 0 6px;
+                                                            margin-right: 2px;
+                                                            text-transform: uppercase;
+                                                            line-height: 20px;
+                                                            transition: 400ms;
+                                                            &::after {
+                                                                content: " ";
+                                                                position: absolute;
+                                                                left: 0;
+                                                                z-index: 0;
+                                                                bottom: -7px;
+                                                                border-top: 8px solid;
+                                                                border-top-color: $main-color;
+                                                                border-right: 5px solid transparent;
+                                                                transition: 400ms;
+                                                            }
+                                                            &:hover {
+                                                                background-color: #444;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &__title {
+                                                    margin: 5px 0 0;
+                                                    padding: 0;
+                                                    font-family: $main-font-family;
+                                                    a {
+                                                        color: $main-color-light-4x;
+                                                        background-color: inherit;
+                                                        font-family: $main-font-family;
+                                                        font-weight: $five-font-weight;
+                                                        font-size: $font-size-14;
+                                                        text-transform: capitalize;
+                                                        padding-top: 10px;
+                                                        padding-bottom: 10px;
+                                                        line-height: 22px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .header__menu__nav__subfeatures {
+                                        display: none;
+                                        min-width: 1140px;
+                                        position: absolute;
+                                        left: 0;
+                                        top: 100%;
+                                        padding: 0;
+                                        margin: 0;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        background: $primary-color;
+                                        /*   box-shadow: 0 7px 13px 0 rgb(0 0 0 / 15%); */
+                                        text-align: left;
+                                        border: none;
+                                        &__content {
+                                            padding: 10px 15px;
+                                            .header__menu__nav__subfeatures__item {
+                                                width: 25%;
+                                                padding: 10px 15px;
+                                                &__list {
+                                                    .header__menu__nav__subfeatures__item__title {
+                                                        &__link {
+                                                            display: block;
+                                                            color: $main-color-light-4x;
+                                                            font-size: $font-size-14;
+                                                            font-weight: $five-font-weight;
+                                                            font-family: $main-font-family;
+                                                            border-bottom: 1px solid $primary-color-light;
+                                                            text-transform: capitalize;
+                                                            line-height: 25px;
+                                                            padding-top: 10px;
+                                                            padding-bottom: 10px;
+                                                            margin-bottom: 5px;
+                                                            transition: 400ms;
+                                                            &:hover {
+                                                                color: $secondary-color;
+                                                            }
+                                                        }
+                                                        .header__menu__nav__subfeatures__item__list2 {
+                                                            &__item {
+                                                                .header__menu__nav__subfeatures__item__list2__links {
+                                                                    display: block;
+                                                                    color: $main-color-light-4x;
+                                                                    background-color: inherit;
+                                                                    font-family: $main-font-family;
+                                                                    font-size: $font-size-14;
+                                                                    font-weight: $secondary-font-weight;
+                                                                    padding-top: 10px;
+                                                                    padding-bottom: 10px;
+                                                                    line-height: 22px;
+                                                                    text-transform: capitalize;
+                                                                    transition: 400ms;
+                                                                    &:hover {
+                                                                        color: $secondary-color;
+                                                                    }
+                                                                }
+                                                                &:not(:last-child) {
+                                                                    border-bottom: 1px solid $main-color-light;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .header__menu__nav__search {
+                        position: relative;
+                        &__panel {
+                            &__icon {
+                                cursor: pointer;
+                            }
+                            .header__nav__search__content {
+                                display: none;
+                                width: 300px;
+                                height: 65px;
+                                position: absolute;
+                                right: 0;
+                                top: 36px;
+                                z-index: 10;
+                                background-color: $primary-color;
+                                /*         box-shadow: 0 2px 5px rgb(0 0 0 / 10%); */
+                                padding: 14px;
+                                border-top: 2px solid $secondary-color;
+                                .header__nav__search__form__group {
+                                    .search__form__control {
+                                        display: block;
+                                        width: 100%;
+                                        height: 36px;
+                                        color: $black-color;
+                                        background: none;
+                                        font-size: $font-size-12;
+                                        border: 1px solid $primary-color-light;
+                                        border-radius: 0;
+                                        padding: 0.5rem 0.75rem;
+                                        line-height: 1.25;
+                                        outline: none;
+                                    }
+                                    .fa-search {
+                                        position: absolute;
+                                        top: 25px;
+                                        right: 25px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import 'root/fonts';
+@import 'root/variables';
+@import 'root/reset';
+@import 'root/responsive';
+@import 'root/classes';
+@import 'root/main';
+// Components import 
+@import 'components/labels';
+@import 'components/navbar';
+@import 'components/trending';
+@import 'components/homeMain';
+@import 'components/newsPost';
+@import 'components/moreNews';
+@import 'components/popularNews'

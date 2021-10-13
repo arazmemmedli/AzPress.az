@@ -1,0 +1,39 @@
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.open {
+    display: block !important;
+}
+
+.mobileOpen {
+    display: grid !important;
+}
+
+.header__menu__nav__content__list__item__link+.mobileActive {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.padReset {
+    padding-left: 0px;
+    padding-right: 0px;
+}

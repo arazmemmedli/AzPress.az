@@ -1,0 +1,56 @@
+$container:1320px;
+//colors//
+$main-color:#1c1c1c;
+$main-color-light: #eaeaea;
+$main-color-light-x: lighten($main-color, 10%);
+$main-color-light-2x: lighten($main-color, 20%);
+$main-color-light-3x: lighten($main-color, 30%);
+$main-color-light-4x: lighten($main-color, 40%);
+$main-color-light-5x: lighten($main-color, 50%);
+$main-color-light-6x: lighten($main-color, 60%);
+$primary-color: #fff;
+$primary-color-light: #dedede;
+$black-color: #000;
+$secondary-color:#ec0000;
+$rss-color: #fa9b39;
+$facebook-color: #3b5998;
+$twitter-color: #00aced;
+$google-color: #c53942;
+$youtube-color: #dd4b39;
+// sizing (padding,margin)
+$size-reset:0;
+$size-x:5px;
+$size-2x:$size-x*2;
+$size-3x:$size-x*3;
+$size-4x:$size-x*4;
+$size-5x:$size-x*5;
+$size-6x:$size-x*6;
+// sizing (fonts 9-19) geri galanlari nisbete gore generate edek
+$font-size-9:9px;
+$font-size-10:10px;
+$font-size-11:11px;
+$font-size-12:12px;
+$font-size-13:13px;
+$font-size-14:14px;
+$font-size-15:15px;
+$font-size-16:16px;
+$font-size-17:17px;
+$font-size-18:18px;
+$font-size-19:19px;
+// font-family //   
+$main-font-family: 'Averta';
+// font-weight //
+$main-font-weight:200;
+$primary-font-weight:300;
+$secondary-font-weight:400;
+$third-font-weight:500;
+$five-font-weight: 600;
+$fourth-font-weight:700;
+// line-height //
+$main-line-height:14px;
+$primary-line-height:17px;
+$secondary-line-height:20px;
+$third-line-height:24px;
+$fourth-line-height:30px;
+// transition //
+$main-transition: all 0.3s linear;

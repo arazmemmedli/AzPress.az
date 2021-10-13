@@ -1,0 +1,266 @@
+// More News Section Start
+
+#more-news {
+    margin-top: 50px;
+
+    .more-news__wrapper {
+        max-width: $container;
+        margin: 0 auto;
+
+        .more-news__header {
+            // width: 47.5rem;
+            border-bottom: 2px solid $main-color;
+            margin: 0 0 40px;
+
+            &__logo {
+                justify-content: space-between;
+                height: 31px;
+
+                &__text {
+                    font-size: $font-size-14;
+                    font-family: $main-font-family;
+                    width: 100%;
+                    font-weight: $fourth-font-weight;
+                    line-height: 100%;
+                    text-transform: uppercase;
+
+                    span {
+                        background-color: $main-color;
+                        color: $primary-color;
+                        height: 30px;
+                        line-height: 30px;
+                        padding: 8px 15px;
+                        position: relative;
+
+                        &::after {
+                            border-color: #1c1c1c rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+                            position: absolute;
+                            content: " ";
+                            width: auto;
+                            height: auto;
+                            bottom: -20px;
+                            margin-left: -10px;
+                            left: 50%;
+                            border-width: 10px;
+                            border-style: solid;
+                        }
+                    }
+                }
+
+                .more-news__slide__controls {
+                    .prevBtn {
+                        margin: 0;
+                        margin-right: 5px;
+                        background: none;
+                        border: 1px solid $primary-color-light;
+                        color: $main-color-light-3x;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 18px;
+                        padding: 0;
+                        border-radius: 0;
+                        display: inline-block;
+                        text-align: center;
+                        font-size: 12px;
+                        -webkit-transition: 400ms;
+                        -moz-transition: 400ms;
+                        -o-transition: 400ms;
+                        transition: 400ms;
+                        cursor: pointer;
+                        z-index: 2;
+
+                        &:hover {
+                            background-color: $secondary-color;
+                            color: $primary-color;
+                        }
+                    }
+
+                    .nextBtn {
+                        margin: 0;
+                        background: none;
+                        border: 1px solid $primary-color-light;
+                        color: $main-color-light-3x;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 18px;
+                        padding: 0;
+                        border-radius: 0;
+                        display: inline-block;
+                        text-align: center;
+                        font-size: 12px;
+                        -webkit-transition: 400ms;
+                        -moz-transition: 400ms;
+                        -o-transition: 400ms;
+                        transition: 400ms;
+                        cursor: pointer;
+                        z-index: 2;
+
+                        &:hover {
+                            background-color: $secondary-color;
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .more-news__box {
+            position: relative;
+            overflow: hidden;
+
+            .more-news__slider {
+                width: 109rem;
+                transition: 0.4s linear;
+
+                &__content {
+                    &__slide {
+                        &:hover .more-news__slider__content__slide__img img {
+                            transform: scale(1.15);
+                        }
+
+                        &__left {
+                            .more-news__slider__content__slide__img {
+                                overflow: hidden;
+                                margin-right: 30px;
+                                margin-bottom: 20px;
+
+                                a {
+                                    img {
+                                        max-width: 300px;
+                                        transition: all .3s ease-out;
+                                    }
+                                }
+
+                                .more-news__category__badge {
+                                    top: 20px;
+                                    left: 20px;
+                                    z-index: 1;
+
+                                    a {
+                                        font-size: 10px;
+                                        padding: 0 6px;
+                                        font-family: $main-font-family;
+                                        margin-right: 5px;
+                                        background: $main-color;
+                                        text-transform: uppercase;
+                                        font-weight: 700;
+                                        color: $primary-color !important;
+                                        height: 20px;
+                                        line-height: 20px;
+                                        display: inline-block;
+                                        transition: 400ms;
+                                        -webkit-transition: 400ms;
+
+                                        &::before {
+                                            content: '';
+                                            position: absolute;
+                                            left: 0;
+                                            z-index: 0;
+                                            bottom: -7px;
+                                            border-top: 8px solid;
+                                            border-top-color: $main-color;
+                                            border-right: 5px solid transparent;
+                                            -webkit-transition: 400ms;
+                                        }
+
+                                        &:hover {
+                                            background-color: $secondary-color;
+                                            color: $primary-color;
+                                        }
+
+                                        &:hover::before {
+                                            border-top-color: $secondary-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &__right {
+                            max-width: 33.875rem;
+                            &__title {
+                                font-size: $font-size-18;
+                                line-height: 24px;
+                                font-family: $main-font-family;
+                                font-weight: $fourth-font-weight;
+
+                                a {
+                                    color: $main-color;
+                                    transition: $main-transition;
+
+                                    &:hover {
+                                        color: $secondary-color;
+                                    }
+                                }
+                            }
+
+                            .more-news__post__meta {
+                                margin: 5px 0 8px;
+                                padding: 0;
+                                align-items: center;
+
+                                &__author {
+                                    font-size: $font-size-12;
+                                    color: $main-color-light-2x;
+                                    font-family: $main-font-family;
+                                    margin-right: 8px;
+                                    padding-right: 10px;
+                                    border-right: 1px solid $primary-color-light;
+                                    line-height: 12px;
+                                    display: inline-block;
+
+                                    a {
+                                        color: $main-color;
+                                        font-weight: $fourth-font-weight;
+                                        text-transform: capitalize;
+                                        transform: $main-transition;
+
+                                        &:hover {
+                                            color: $secondary-color;
+                                        }
+                                    }
+                                }
+
+                                &__date {
+                                    font-size: $font-size-12;
+                                    color: $main-color-light-2x;
+                                    font-family: $main-font-family;
+                                    margin-right: 8px;
+                                    padding-right: 10px;
+                                    line-height: 12px;
+                                    display: inline-block;
+                                }
+                            }
+
+                            .more-news__post__desc {
+                                color: $main-color-light-x;
+                                font-family: $main-font-family;
+                                font-size: $font-size-13;
+                                line-height: 2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .more-news__wrapper__right {
+            float: right;
+            max-width: 300px;
+
+            .more-news__ads {
+                margin: 0px 0px 50px 0px;
+
+                &__widget {
+                    &__img {
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// More News Section End
